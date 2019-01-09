@@ -47,7 +47,7 @@ if(isset($message['text']))
   {
 	$response = "Ciao $firstname! \nMandami un link Amazon o condividilo direttamente con me da altre app! \nTi rispondero' con il link affiliato per il gruppo https://t.me/HomeAssistant_Rpi !\n\nCreated by https://www.itchsblog.it";
   }
-  elseif($dominioAmazon == "amazon")
+  if($dominioAmazon == "amazon")
   {	  
 	//new parser:
 	$url_to_parse = $text_url_array[0];
@@ -74,7 +74,7 @@ if(isset($message['text']))
 	$response = "$obj_desc\n$worldsym  $short";
   
    }
-   elseif(strpos($text, "/link") == 0 && strlen($text)<6 )
+   elseif(strpos($text, "/link") === 0 && strlen($text)<6 )
   {
 	   $response = "Incolla l'URL Amazon da convertire dopo il comando /link";
    }
