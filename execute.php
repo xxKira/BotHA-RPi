@@ -35,7 +35,7 @@ if(isset($message['text']))
   $dominioGearbest = get_string_between($text, "://www.", ".com");
 	
   //NUOVO PARSER:
-  //$text_url_array = parse_text($text);
+  $text_url_array = parse_text($text);
   
   $text_url_array = getUrls($text);
 	
@@ -76,10 +76,10 @@ if(isset($message['text']))
    }
    elseif(strpos($text, "/link") === 0 && strlen($text)<6 )
   {
-	   //$response = "Incolla l'URL Amazon da convertire dopo il comando /link";
+	   $response = "Incolla l'URL Amazon da convertire dopo il comando /link";
    }
   else {
-	  //$response = "$string_test";
+	  $response = "$string_test";
   }
 }
 /*
