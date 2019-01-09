@@ -59,7 +59,7 @@ if(isset($message['text']))
 	$obj_desc = $testoLink;
 	$risp = "DA $username";
 	$short = make_bitly_url($url_affiliate,'itchsblog','json');
-	$response = "&obj_desc\n$risp $short";
+	$response = "$obj_desc\n$risp $short";
 	
   }
    elseif($dominioGearbest == "gearbest")
