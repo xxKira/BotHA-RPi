@@ -35,7 +35,7 @@ if(isset($message['text']))
   $dominioGearbest = get_string_between($text, "://www.", ".com");
 	
   //NUOVO PARSER:
-  $text_url_array = parse_text($text);
+  //$text_url_array = parse_text($text);
   
   $text_url_array = getUrls($text);
 	
