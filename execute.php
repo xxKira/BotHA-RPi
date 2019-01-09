@@ -32,7 +32,7 @@ if(isset($message['text']))
   $testoLink = $arr[0];
   
   $dominioAmazon = get_string_between($text, "://www.", ".it");
-  $dominioGearbest = get_string_between($text, "://www.", ".com");
+  $dominioGearbest = get_string_between($text, "://www.", ".com"); 
 	
   //NUOVO PARSER:
   $text_url_array = parse_text($text);
