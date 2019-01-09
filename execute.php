@@ -57,7 +57,7 @@ if(isset($message['text']))
 	$pollicesym =  json_decode('"\uD83D\uDC4D"');
 	$worldsym = json_decode('"\uD83C\uDF0F"');
 	$obj_desc = $testoLink;
-	$risp = "DA $username";
+	$risp = "[** INVIATO DA: $firstname **]";
 	$short = make_bitly_url($url_affiliate,'itchsblog','json');
 	$response = "$obj_desc\n$risp $short";
 	
