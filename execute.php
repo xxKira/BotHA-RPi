@@ -35,7 +35,7 @@ if(isset($message['text']))
   $dominioGearbest = get_string_between($text, "://www.", ".com");
 	
   //NUOVO PARSER:
-  //$text_url_array = parse_text($text);
+  $text_url_array = parse_text($text);
   
   $text_url_array = getUrls($text);
 	
@@ -57,8 +57,9 @@ if(isset($message['text']))
 	$pollicesym =  json_decode('"\uD83D\uDC4D"');
 	$worldsym = json_decode('"\uD83C\uDF0F"');
 	$obj_desc = $testoLink;
-	$short = make_bitly_url($url_affiliate,'ghir0','json');
-	$response = "$obj_desc\n$worldsym $short";
+	$risp = "DA $username"
+	$short = make_bitly_url($risp + $url_affiliate,'itchsblog','json');
+	$response = "inviato da, $risp + $short";
 	
   }
    elseif($dominioGearbest == "gearbest")
@@ -70,13 +71,13 @@ if(isset($message['text']))
 	$pollicesym =  json_decode('"\uD83D\uDC4D"');
 	$worldsym = json_decode('"\uD83C\uDF0F"');
 	$obj_desc = $testoLink;
-	$short = make_bitly_url($url_affiliate,'ghir0','json');
+	$short = make_bitly_url($url_affiliate,'itchsblog','json');
 	$response = "$obj_desc\n$worldsym  $short";
   
    }
    elseif(strpos($text, "/link") === 0 && strlen($text)<6 )
   {
-	   $response = "Incolla l'URL Amazon da convertire dopo il comando /link";
+	   $response = "Incolla l'URL Amazon da convertire dopo il comando /link iiii";
    }
   else {
 	  $response = "$string_test";
